@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Hack The Hood</title>
+		<link href="css/styles.css" rel="Stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="flex">
+				<div class="logo">
+					<a href="#"><img src="images/mrRobot4.jpg" alt="Mr Robot logo" width="120" height="50" border="0"/></a>
+				</div>
+			<nav>
+				<button id="nav-toggle" class="hamburger-menu">
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                </button>
+				<ul id="nav-menu-container">
+					<li><a href="#">DOWNLOAD</a></li>
+					<li><a href="#">PRESENTATION</a></li>
+					<li><a href="#">PLAYERS RANK</a></li>
+					<li><a href="#">CHAT</a></li>
+					<li><a href="#">REPORT BUGS</a></li>
+					<li><a href="#">EVENTS</a></li>
+					<li><a href="#">PLAYERS ON</a></li>
+				</ul>
+			</nav>
+			<?php include('loginserv.php')?>
+			<?php 
+				if ($_SESSION['loggedin'] != true): 
+
+				<a href="LOGINREGISTER/loginsignin.php" id="login-register-button">Login / Register</a>
+			?>
+			<?php 
+				else:
+					echo $_SESSION['user'];
+			?>
+			
+			</div>
+		</header>
+
+		<main>
+			<section id="hero-image">
+                <div class="hero-marketing-text">
+                    <h1>The most interesting <span>Hacking GAME</span> of the decade</h1>
+                </div>
+            </section>
+		</main>
+
+		<script>
+            document.getElementById('nav-toggle').addEventListener('click', function () {
+                let navMenu = document.getElementById('nav-menu-container');
+                navMenu.style.display = navMenu.offsetParent === null ? 'block' : 'none';
+            });
+        </script>
+	</body>
+
+</html>

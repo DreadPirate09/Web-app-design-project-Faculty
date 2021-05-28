@@ -1,0 +1,225 @@
+body {
+    font-family: 'helvetica', 'sans-serif';
+    margin: 0;
+}
+
+/* start: global style rules */
+h1, h2, h3, h4, h5 {
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, label, strong {
+    line-height: 2;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.flex {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #131313;
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 4px solid #FFB320;
+}
+
+.hamburger-menu {
+    background-color: transparent;
+    border: 1px solid #FFB320;
+    padding: 3px 5px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .strip {
+    display: block;
+    height: 1px;
+    background-color: #FFB320;
+    margin: 4px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #eee;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #FFB320;
+}
+
+#login-register-button {
+    background-color: #FFB320;
+    color: #131313;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+#hero-image {
+    background: url('../images/cyber.gif') top center no-repeat;
+    height: 720px;
+    background-size: cover;
+}
+
+.hero-marketing-text {
+    max-width: 600px;
+    margin: -30px auto 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+.hero-marketing-text h1 {
+    color: #eee;
+    font-size: 3.5em;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+.hero-marketing-text span {
+    color: #FFB320;
+}
+
+/* start: media queries */
+@media (max-width: 1200px) {
+    .flex {
+        max-width: 1000px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .flex {
+        max-width: 720px;
+    }
+
+    nav ul li {
+        margin: 0 12px;
+        font-size: 0.85em;
+    }
+
+    footer .flex {
+        flex-wrap: wrap-reverse;
+    }
+
+    footer small {
+        flex-basis: 100%;
+        font-size: 0.75em;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+
+    footer ul {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0;
+    }
+} /* end 991px */
+
+@media (max-width: 767px) {
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .flex {
+        max-width: 540px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 101%;
+        width: 100%;
+        background-color: #131313;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 15px 0 15px 20px;
+        border-bottom: 1px solid #FFB320;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-top: 2px;
+    }
+
+    footer ul li {
+        margin: 0 10px;
+    }
+
+    footer ul li a {
+        font-size: 0.75em;
+    }
+} /* end 767px */
+
+@media (max-width: 400px) {
+    .logo img {
+        width: 150px;
+        margin-top: 2px;
+    }
+
+    #login-register-button {
+        padding: 10px;
+        font-size: 0.65em;
+    }
+}
+/* end: media queries */
